@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chec Expropiaciones 2021</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="container p-4">
+		<div class="row">
+			<div class="col-md-4 offset-md-4">
+                <div class="mb-3">
+                    <h2>Ingreso de Exp. Expropiaciones</h2>
+                </div>
+                <form id="exp-form">
+                    <div class="mb-3 ">
+                      <input type="text" class="form-control" id="exp-codigo" placeholder="Código Expediente">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="ki" placeholder="KI">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="kf" placeholder="KF">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="oficio" placeholder="Oficio Entrega">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="url-plano" placeholder="Plano Catastro">
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" id="ubicacion">
+                            <option selected>Ubicación</option>
+                            <option value="Derecha">Derecha</option>
+                            <option value="Izquierda">Izquierda</option>
+                            <option value="Ambos Lados">Ambos Lados</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" id="status">
+                            <option selected>Estado</option>
+                            <option value="Expropiado">Expropiado</option>
+                            <option value="PEPV">PEPV</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control"  id="exp-notas" rows="3" placeholder="Notas"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-3" id="form-btn">
+                        Crear
+                    </button>
+                  </form>
+            </div>
+            
+            <div class="col-md-4" id="exp-container">
+                
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCJVBy-PBVTwx1eatsve9ww3g3vLBsomcs",
+    authDomain: "chec-js-firebase.firebaseapp.com",
+    projectId: "chec-js-firebase",
+    storageBucket: "chec-js-firebase.appspot.com",
+    messagingSenderId: "715679080384",
+    appId: "1:715679080384:web:9f823146a8bdffb160f225"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    <script src="index.js"></script>
+</body>
+</html>
