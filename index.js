@@ -1,3 +1,4 @@
+
 const db = firebase.firestore();
 
 const btnCrear = document.getElementById('exp-form');
@@ -39,21 +40,26 @@ window.addEventListener('DOMContentLoaded', async (e) => {
 
         expContainer.innerHTML = '';
 
+        const urlPlano = document.querySelectorAll('#link-plano');
+
         querySnapshot.forEach((doc) =>{
-            console.log(doc.data())
+            console.log(doc.data().plano)
     
             const expediente = doc.data();
             expediente.id = doc.id;
 
-
+            const urlPlano = doc.data().plano;
+            
     
             expContainer.innerHTML += `<div class="card card-body mt-2 bg-light">
                 <h5>
                     ${expediente.ExpCod}
                 </h5>
                 <p>
-                    <span>#Oficio:</span>
+                    <span><strong>Oficio:</strong></span>
                     ${expediente.ofi}
+                    <span><a href="${urlPlano}" id="link-plano"><i class="material-icons">attach_file</i></a></span>
+
                 </p>
                 <p>
                     <span>${expediente.KI}</span>
@@ -61,6 +67,7 @@ window.addEventListener('DOMContentLoaded', async (e) => {
                     <span>${expediente.KF}</span>
                     <span> - </span>
                     <span>${expediente.status}</span>
+                    
                 </p>
                 <div class="justify-content-start">
                     
@@ -141,3 +148,4 @@ btnCrear.addEventListener('submit', async (e) => {
 
     console.log(ExpCod, KI, KF, ofi, plano, ubicacion, status, notas)
 })
+
