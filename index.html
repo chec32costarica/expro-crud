@@ -6,12 +6,18 @@
     <title>Chec Expropiaciones 2021</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link rel="stylesheet" href="custom.css">
 
 </head>
 <body>
     
     <div class="container p-4">
+        <button id="scrollToTop">
+            <i class="material-icons">arrow_upward</i>
+        </button>
+        <button id="btn-add">
+            <i class="material-icons">add</i>
+        </button>
         <div class="col-md-4 mb-4 offset-md-4">
             <iframe src="https://www.google.com/maps/d/embed?mid=1A_t8PQoJlOyHI47L7aebTgvUU1186hoS" width="100%" height="400px"></iframe>
         </div>
@@ -95,5 +101,6 @@
   firebase.initializeApp(firebaseConfig);
 </script>
     <script src="index.js"></script>
+    <script src="ui.js"></script>
 </body>
 </html>
