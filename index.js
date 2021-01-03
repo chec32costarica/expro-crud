@@ -48,7 +48,8 @@ window.addEventListener('DOMContentLoaded', async (e) => {
             const expediente = doc.data();
             expediente.id = doc.id;
 
-            const urlPlano = doc.data().plano;
+            const urlOficio = doc.data().plano;
+            const urlPlano = doc.data().notas;
             
     
             expContainer.innerHTML += `<div class="card card-body mt-2 bg-light">
@@ -57,7 +58,8 @@ window.addEventListener('DOMContentLoaded', async (e) => {
                 </h5>
                 <p>
                     <span class="fw-bold">${expediente.ofi}</span>
-                    <span><a href="${urlPlano}" id="link-plano"><i class="material-icons">attach_file</i></a></span>
+                    <span><a href="${urlOficio}" id="link-plano"><i class="material-icons">attach_file</i></a></span>
+                    <span><a href="${urlPlano}" id="link-plano"><i class="material-icons">location_on</i></a></span>
 
                 </p>
                 <p>
