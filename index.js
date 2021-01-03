@@ -56,8 +56,7 @@ window.addEventListener('DOMContentLoaded', async (e) => {
                     ${expediente.ExpCod}
                 </h5>
                 <p>
-                    <span><strong>Oficio:</strong></span>
-                    ${expediente.ofi}
+                    <span class="fw-bold">${expediente.ofi}</span>
                     <span><a href="${urlPlano}" id="link-plano"><i class="material-icons">attach_file</i></a></span>
 
                 </p>
@@ -65,8 +64,7 @@ window.addEventListener('DOMContentLoaded', async (e) => {
                     <span>${expediente.KI}</span>
                     <span> - </span>
                     <span>${expediente.KF}</span>
-                    <span> - </span>
-                    <span>${expediente.status}</span>
+                    <span class="badge rounded-pill bg-success">${expediente.status}</span>
                     
                 </p>
                 <div class="justify-content-start">
