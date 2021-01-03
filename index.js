@@ -63,7 +63,7 @@ window.addEventListener('DOMContentLoaded', async (e) => {
                 </div>
                 
                 <p>
-                    <span class="fw-lighter fs-6">${expediente.ofi}</span>
+                    <span style="font-size: 12px">${expediente.ofi}</span>
                     
 
                 </p>
