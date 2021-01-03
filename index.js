@@ -52,14 +52,19 @@ window.addEventListener('DOMContentLoaded', async (e) => {
             const urlPlano = doc.data().notas;
             
     
-            expContainer.innerHTML += `<div class="card card-body mt-2 bg-light">
-                <h5>
-                    ${expediente.ExpCod}
-                </h5>
+            expContainer.innerHTML += `<div>
+            <div class="card card-body mt-2 bg-light">
+                <div class="row">
+                    <div class="col-sm d-flex flex-row"><h5>${expediente.ExpCod}</h5></div>
+                    <div class="col-sm d-flex flex-row">
+                        <span><a href="${urlOficio}" id="link-plano"><i class="material-icons">attach_file</i></a></span>
+                        <span><a href="${urlPlano}" id="link-plano"><i class="material-icons">location_on</i></a></span>
+                    </div>
+                </div>
+                
                 <p>
-                    <span class="fw-bold">${expediente.ofi}</span>
-                    <span><a href="${urlOficio}" id="link-plano"><i class="material-icons">attach_file</i></a></span>
-                    <span><a href="${urlPlano}" id="link-plano"><i class="material-icons">location_on</i></a></span>
+                    <span class="fw-lighter fs-6">${expediente.ofi}</span>
+                    
 
                 </p>
                 <p>
@@ -79,6 +84,7 @@ window.addEventListener('DOMContentLoaded', async (e) => {
                     </btn>
                 </div>
                 
+            </div>
             </div>`;
 
             const btnsDelete = document.querySelectorAll('.btn-delete');
