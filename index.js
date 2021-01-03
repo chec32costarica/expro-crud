@@ -26,11 +26,11 @@ const crearExp = (
         notas
     });
 
-const obtenerExp = () => db.collection('expropiaciones').get();
+const obtenerExp = () => db.collection('expropiaciones').orderBy("ExpCod", "asc").get();
 
 const obtenerExpEdit = (id) => db.collection('expropiaciones').doc(id).get();
 
-const OnObtenerExp = (callback) => db.collection('expropiaciones').onSnapshot(callback);
+const OnObtenerExp = (callback) => db.collection('expropiaciones').orderBy("KI", "asc").onSnapshot(callback);
 
 const deteleExp = id => db.collection('expropiaciones').doc(id).delete();
 

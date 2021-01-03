@@ -40,3 +40,25 @@
 #btn-add:active{
     background: #7f41e2;
 }
+
+#catalogo {
+    position: fixed;
+    right: 20px;
+    bottom: 140px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(117, 3, 3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 100;
+    text-align: center;
+    padding: 10px;
+}
+
+#catalogo:active{
+    background: #7f41e2;
+}

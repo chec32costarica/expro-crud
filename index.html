@@ -18,9 +18,12 @@
         <a id="btn-add" href="#exp-form">
             <i class="material-icons">add</i>
         </a>
+        <button id="catalogo" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="material-icons">library_books</i>
+        </button>
         <div class="col-md-4 mb-4 offset-md-4">
             <iframe src="https://www.google.com/maps/d/embed?mid=1A_t8PQoJlOyHI47L7aebTgvUU1186hoS" width="100%" height="400px"></iframe>
-        </div>
+        </button>
         <div class="col-md-4 mb-4 offset-md-4">
             <h2>Propiedades Entregadas</h2>
         </div>
@@ -72,11 +75,26 @@
                     </button>
                   </form>
             </div>
-            
-            
         </div>
+        
     </div>
     
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Información del Proyecto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        
+      </div>
+    </div>
+  </div>
 
     
 
@@ -102,5 +120,11 @@
 </script>
     <script src="index.js"></script>
     <script src="ui.js"></script>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
 </body>
 </html>
