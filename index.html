@@ -15,9 +15,9 @@
         <button id="scrollToTop">
             <i class="material-icons">arrow_upward</i>
         </button>
-        <a id="btn-add" href="#exp-form">
+        <button id="btn-add" data-bs-toggle="modal" data-bs-target="#formulario-add">
             <i class="material-icons">add</i>
-        </a>
+        </button>
         <button id="catalogo" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <i class="material-icons">library_books</i>
         </button>
@@ -31,70 +31,83 @@
             
                 
         </div>
-		<div class="row">
-			<div class="col-md-4 offset-md-4">
-                <div class="mb-3">
-                    <h2>Ingresar Expropiación</h2>
-                </div>
-                <form id="exp-form">
-                    <div class="mb-3 ">
-                      <input type="text" class="form-control" id="exp-codigo" placeholder="Código Expediente">
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="ki" placeholder="KI">
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="kf" placeholder="KF">
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="oficio" placeholder="Oficio Entrega">
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="url-plano" placeholder="Plano Catastro">
-                    </div>
-                    <div class="mb-3">
-                        <select class="form-select" id="ubicacion">
-                            <option selected>Ubicación</option>
-                            <option value="Derecha">Derecha</option>
-                            <option value="Izquierda">Izquierda</option>
-                            <option value="Ambos Lados">Ambos Lados</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <select class="form-select" id="status">
-                            <option selected>Estado</option>
-                            <option value="Expropiado">Expropiado</option>
-                            <option value="PEPV">PEPV</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control"  id="exp-notas" rows="3" placeholder="Notas"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary mb-3" id="form-btn">
-                        Crear
-                    </button>
-                  </form>
-            </div>
-        </div>
+		
         
     </div>
     
 
-    <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
+<!-- Modal  Informacion-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Información del Proyecto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            
+        </div>
+    </div>
+    </div>
+
+<!-- Modal  formulario-->
+<div class="modal fade" id="formulario-add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Información del Proyecto</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="exampleModalLabel">Ingresar Expropiación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ...
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <form id="exp-form">
+                        <div class="mb-3 ">
+                          <input type="text" class="form-control" id="exp-codigo" placeholder="Código Expediente">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="ki" placeholder="KI">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="kf" placeholder="KF">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="oficio" placeholder="Oficio Entrega">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="url-plano" placeholder="Plano Catastro">
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" id="ubicacion">
+                                <option selected>Ubicación</option>
+                                <option value="Derecha">Derecha</option>
+                                <option value="Izquierda">Izquierda</option>
+                                <option value="Ambos Lados">Ambos Lados</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" id="status">
+                                <option selected>Estado</option>
+                                <option value="Expropiado">Expropiado</option>
+                                <option value="PEPV">PEPV</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control"  id="exp-notas" rows="3" placeholder="Notas"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-3" id="form-btn">
+                            Crear
+                        </button>
+                      </form>
+                </div>
+            </div>
         </div>
         
-      </div>
     </div>
-  </div>
+</div>
+</div>
 
     
 
